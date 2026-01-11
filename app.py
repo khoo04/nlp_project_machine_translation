@@ -23,7 +23,7 @@ def load_model():
 try:
     tokenizer, model = load_model()
 except Exception as e:
-    st.error("⚠️ Error loading model. Please check your internet connection.")
+    st.error(f"⚠️ Error loading model. Please check your internet connection. {e}")
     st.stop()
 
 
@@ -122,14 +122,14 @@ C. Universal Tokenization
         st.image(
             "screenshots/image_english_centric.png",
             caption="English-Centric Multilingual",
-            use_container_width=True,
+            width="stretch",
         )
 
     with col2:
         st.image(
             "screenshots/image_m2m100.png",
             caption="M2M-100: Many-to-Many Multilingual Mode",
-            use_container_width=True,
+            width="stretch",
         )
 
     st.markdown("### 4. Reason to choose M2M100")
@@ -147,10 +147,10 @@ def info():
     st.subheader("👥 Team Members")
 
     members = [
-        "KHOO ZHEN XIAN",
-        "AQEM ZAKWAN BIN AHMAD",
-        "FARIZ DANISH BIN FADLI",
-        "AHMAD MIRZA SHAHMI BIN ABDUL HANIF",
+        "KHOO ZHEN XIAN - B032420047",
+        "AQEM ZAKWAN BIN AHMAD - B032420028",
+        "FARIZ DANISH BIN FADLI - B032420037",
+        "AHMAD MIRZA SHAHMI BIN ABDUL HANIF - B032420012",
     ]
     cols = st.columns(2)
     for i, member in enumerate(members):
@@ -166,16 +166,13 @@ def info():
     ability to perform direct many-to-many translations without relying on English as an intermediary.
 
     **Potential Commercial Applications:**
-    - 🌍 Multilingual customer support portals for global businesses
     - 🎓 Educational platforms supporting multilingual learning content
     - 🏛️ Government and public service translation tools
-    - 📱 Integration into chatbots and virtual assistants for international users
 
     **Business Value:**
     - Reduces dependency on multiple translation models
     - Improves translation accuracy for non-English languages
     - Scalable architecture that supports future language expansion
-    - Can be deployed as a Software-as-a-Service (SaaS) solution or API-based service
     """)
 
 
