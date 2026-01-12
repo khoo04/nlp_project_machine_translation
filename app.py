@@ -134,8 +134,8 @@ C. Universal Tokenization
 
     st.markdown("### 4. Reason to choose M2M100")
     st.markdown("""
-- **No Bias**: It preserves meaning better for non-English languages (e.g., translating Malay $\rightarrow$ Chinese directly is more accurate than going through English).
-- **Simplicity**: You only need to load one model to handle 9,900 different translation directions ($100 \times 99$), rather than loading separate models for each language pair.
+- **No Bias**: It preserves meaning better for non-English languages (e.g., translating Malay :material/trending_flat: Chinese directly is more accurate than going through English).
+- **Simplicity**: You only need to load one model to handle 9,900 different translation directions (100 x 99), rather than loading separate models for each language pair.
                 """)
 
 
@@ -225,7 +225,18 @@ with chat_col:
         q = prompt.lower()
 
         # 1. Project Overview
-        if any(k in q for k in ["project", "about", "website", "this system"]):
+        if any(
+            k in q
+            for k in [
+                "project",
+                "about",
+                "website",
+                "this system",
+                "info",
+                "information",
+                "overview",
+            ]
+        ):
             response_text = (
                 "This is an NLP group project focused on multilingual machine translation "
                 "using the M2M100 model."
@@ -234,7 +245,7 @@ with chat_col:
 
         # 2. Team Members
         elif any(k in q for k in ["team", "members", "group", "developer"]):
-            response_text = "This project was developed by four students as part of the BAXI 3413 course."
+            response_text = "This project was developed by four students as part of the BAXI 3413 course: **KHOO ZHEN XIAN (B032420047), FARIZ DANISH BIN FADLI (B032420037), AQEM ZAKWAN BIN AHMAD (B032420028), AHMAD MIRZA SHAHMI BIN ABDUL HANIF (B032420012)**"
             target_page_title = "Project Info"
 
         # 3. Translation Usage
