@@ -23,14 +23,13 @@ The portal also includes a chatbot to assist users in navigating the system and 
 ## Installation Guide
 
 ### Software Requirements
-- Python 3.13
--
+- Python 3.12 above
 
 
 ### Step 1: Clone the Project Repository
 ```bash
-git clone <repository-url>
-cd m2m100-translator-portal
+git clone https://github.com/khoo04/nlp_project_machine_translation.git
+cd nlp_project_machine_translation
 ```
 
 ### Step 2: Create a Virtual Environment
